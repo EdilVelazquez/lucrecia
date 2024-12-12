@@ -1,0 +1,126 @@
+.fc {
+  /* Personalización del calendario */
+  --fc-border-color: #e5e7eb;
+  --fc-button-bg-color: #EC4899;
+  --fc-button-border-color: #EC4899;
+  --fc-button-hover-bg-color: #DB2777;
+  --fc-button-hover-border-color: #DB2777;
+  --fc-button-active-bg-color: #DB2777;
+  --fc-today-bg-color: #FCE7F3;
+  --fc-page-bg-color: #fff;
+  --fc-neutral-bg-color: #fff;
+  --fc-list-event-hover-bg-color: #f3f4f6;
+  --fc-highlight-color: #fce7f3;
+}
+
+/* Estilos base del calendario */
+.fc-theme-standard .fc-scrollgrid {
+  @apply border border-gray-200 rounded-lg overflow-hidden;
+}
+
+.fc .fc-button {
+  @apply rounded-md shadow-sm text-sm font-medium text-white transition-colors duration-150;
+  padding: 0.5rem 1rem;
+}
+
+.fc .fc-button-primary:not(:disabled) {
+  @apply bg-pink-500 border-pink-500;
+}
+
+.fc .fc-button-primary:not(:disabled):hover {
+  @apply bg-pink-600 border-pink-600;
+}
+
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  @apply bg-pink-700 border-pink-700;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  @apply bg-pink-50;
+}
+
+.fc .fc-daygrid-day-number {
+  @apply text-gray-700 font-medium;
+  padding: 0.5rem;
+}
+
+.fc .fc-toolbar-title {
+  @apply text-gray-900 font-semibold capitalize;
+}
+
+.fc .fc-event {
+  @apply rounded-md shadow-sm cursor-pointer transition-all duration-200 text-sm;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  min-height: 2rem;
+  margin: 0.125rem 0;
+}
+
+.fc .fc-event:hover {
+  @apply opacity-90 transform scale-[1.02] shadow-md;
+}
+
+.fc .fc-col-header-cell {
+  @apply bg-gray-50 py-3;
+}
+
+.fc .fc-col-header-cell-cushion {
+  @apply text-gray-700 font-medium;
+}
+
+.fc .fc-daygrid-day {
+  @apply cursor-pointer transition-colors duration-150;
+}
+
+.fc .fc-daygrid-day:hover {
+  @apply bg-gray-50;
+}
+
+.fc .selected-day {
+  @apply bg-pink-50;
+}
+
+.fc .fc-daygrid-day-frame {
+  @apply min-h-[100px];
+}
+
+.fc .fc-daygrid-more-link {
+  @apply text-pink-600 font-medium text-sm;
+}
+
+.fc .fc-popover {
+  @apply shadow-lg border-gray-200 rounded-lg;
+}
+
+.fc .fc-popover-header {
+  @apply bg-gray-50 px-4 py-2 border-b border-gray-200;
+}
+
+.fc .fc-popover-title {
+  @apply text-gray-900 font-medium;
+}
+
+.fc .fc-popover-body {
+  @apply p-2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .fc .fc-toolbar {
+    @apply flex-col gap-2;
+  }
+  
+  .fc .fc-toolbar-title {
+    @apply text-lg;
+  }
+
+  .fc .fc-button {
+    @apply text-xs;
+    padding: 0.375rem 0.75rem;
+  }
+
+  .fc .fc-daygrid-day-frame {
+    @apply min-h-[80px];
+  }
+}
